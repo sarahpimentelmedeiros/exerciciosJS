@@ -16,22 +16,33 @@
 </head>
 <body>
     <h1>JavaScript externo</h1>
-    <button class="botao" id="b1"> Ação 1</button>
-    <button class="botao" id="b2"> Ação 2</button>
-    <button class="botao" id="b3"> Ação 3</button>
-    <button class="botao" id="b4"> Ação 4</button>
-    <p>Aqui vou registrar suas ações com os botões acima.</p>
-    
-
+    <button class="botao" onclick="acao1()"> Ação 1</button>
+    <button class="botao" onclick="acao2()"> Ação 2</button>
+    <button class="botao" onclick="acao3()"> Ação 3</button>
+    <button class="botao" onclick="acao4()"> Ação 4</button>
+    <p>Aqui vou registrar suas ações com os botões acima.<br></p>
+    <section id="resultado">
+    </section>
     <script>
-        function pegarelemento(id){
-            getElementById(id);
-
+        let cont = ""
+        function escrever() {
+            document.getElementById('resultado').innerHTML += `<p>Clicou no ${cont} botão</p>`
         }
-        var botoes = [pegarelemento(b1), pegarelemento(b2), pegarelemento(b3), pegarelemento(b4)];
-        botoes.addEventListener('click', acoes)
-        function acoes() {
-            
+        function acao1() {
+            cont = "primeiro"
+            escrever()
+        }
+        function acao2() {
+            cont = "segundo"
+            escrever()
+        }
+        function acao3() {
+            cont = "terceiro"
+            escrever()
+        }
+        function acao4() {
+            cont = "quarto"
+            escrever()
         }
     </script>
 </body>
