@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <style>
+        #botao {
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados v1.0</h1>
+    <button id="botao">Clique para começar</button>
+    <script>
+        var clique = document.getElementById('botao')
+        clique.addEventListener('click', clicar)
+        function clicar() {
+            var nome = prompt('Qual seu nome?')
+            alert(`Olá, ${nome}! É um prazer te conhecer!`)
+            
+        }
+    </script>
+</body>
+</html>

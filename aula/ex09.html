@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+    <style>
+        h1 {
+            font-family: 'Pacifico', cursive;
+        }
+        #botao1 {
+            width: 150px;
+            height: 80px;
+        }
+        #botao2 {
+            width: 150px;
+            height: 80px;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    <button id="botao1">Clique em mim</button>
+    <button id="botao2">Zerar contador</button>
+    
+    <p id="resultado">O contador está com X cliques</p>
+
+    <script>
+        var clique1 = document.getElementById('botao1')
+        var clique2 = document.getElementById('botao2')
+        var contador = 0
+        clique1.addEventListener('click', adicionar)
+        clique2.addEventListener('click', zerar)
+        function escrever () {
+            document.getElementById('resultado').innerHTML = `O contador está com <mark>${contador}</mark> cliques`
+
+        }
+        function adicionar() {
+            contador++
+            escrever()
+        }
+        function zerar() {
+            contador=0
+            escrever();
+        }
+
+    </script>
+</body>
+</html>

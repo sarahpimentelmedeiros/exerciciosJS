@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Testando click com alert</h1>
+    <button id="botao1">Clique aqui para digitar seu nome</button>
+
+    <div id="nomeAlert">Aqui vai aparecer um texto com seu nome</div>
+
+    <div id="menu">
+        <p id="quadrado">clique aqui para alterar a cor</p>
+    </div>
+    <br>
+
+    <p>Vamos somar dois numeros?</p>
+    <input name="numero1" id="numero1"> +
+    <input name="numero2" id="numero2">
+    <button onclick="somar()">Somar</button>
+    <br>
+    <div>
+        <p>Resultado:</p>
+        <div id="resultado"></div>
+    </div>
+</body>
+<script>
+    var clique = document.getElementById('botao1')
+    clique.addEventListener('click', clicarBotao1)
+
+    function clicarBotao1() {
+        var nome = prompt('Digite seu nome para iniciarmos')
+        document.getElementById('nomeAlert').innerHTML = `O nome digitado foi: ${nome}`
+    }
+
+    var alterar = document.getElementById('menu')
+    alterar.addEventListener('click', clicar)
+    alterar.addEventListener('mouseout', sair)
+
+    function clicar() {
+        alterar.style.background = 'red'
+        alterar.innerHTML = 'voce clicou'
+    }
+    function sair() {
+        alterar.style.background = 'green'
+    }
+
+    function somar() {
+        var num1 = document.getElementById('numero1')
+        var num2 = document.getElementById('numero2')
+        var n1 = Number(num1.value)
+        var n2 = Number(num2.value)
+        var soma = n1 + n2
+        document.getElementById('resultado').innerHTML = `A soma entre ${n1} e ${n2} é igual a ${soma}`
+    }
+     
+</script>
+</html>

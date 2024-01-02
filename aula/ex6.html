@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #botao {
+            width: 150px;
+            height: 80px;
+        }
+        #resultado {
+            font-family: arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <button id="botao">Iniciar a soma</button>
+    <p id="resultado">O resultado vem aqui...</p>
+    <script>
+        var clique = document.getElementById('botao')
+        clique.addEventListener('click', clicar)
+
+        function clicar() {
+            var num1 = Number(prompt('Digite um numero: '))
+            var num2 = Number(prompt('Digite outro numero: '))
+            var soma = num1 + num2
+            document.getElementById('resultado').innerHTML = `A soma entre <mark>${num1}</mark> e <mark>${num2}</mark> é igual a <strong>${soma}<strong>!`
+        }
+    </script>
+</body>
+</html>

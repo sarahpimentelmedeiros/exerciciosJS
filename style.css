@@ -1,0 +1,15 @@
+#menu {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+}
+#quadrado {
+    color: blue;
+    text-align: center;
+}
+#botao1 {
+    width: 300px;
+    height: 100px;
+    
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #botao {
+            width: 150px;
+            height: 80px;
+        }
+        #resultado {
+            font-family: arial;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Vários cálculos em JS</h1>
+    <button id="botao">Clique para calcular</button>
+    <p id="resultado">O resultado vai aparecer aqui...</p>
+
+    <script>
+        var clique = document.getElementById('botao')
+        clique.addEventListener('click', clicar)
+        function clicar() {
+            var numero = Number(prompt('Digite um número inteiro'))
+            document.getElementById('resultado').innerHTML = `O número a ser analisado aqui será o <strong>${numero}</strong><hr><br>
+            O seu valor absoluto é ${Math.abs(numero)}<br>
+            A sua parte inteira é ${Math.trunc(numero)}<br>
+            O valor inteiro mais próximo é ${Math.round(numero)}<br>
+            A sua raiz quadrada é ${Math.sqrt(numero)}<br>
+            A sua raiz cúbica é ${Math.cbrt(numero)}<br>
+            O valor de ${numero}<sup>2</sup> é ${Math.pow(numero, 2)}<br>
+            O valor de ${numero}<sup>3</sup> é ${Math.pow(numero, 3)}`
+        }        
+    </script>
+</body>
+</html>

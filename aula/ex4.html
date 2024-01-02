@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+    <style>
+        h1 {
+            font-family: Arial;
+        }
+        #botao {
+            width: 200px;
+            height: 80px;
+            font-size: 12pt;
+        }
+        #texto {
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button id="botao">Clique para começar</button>
+    <p id="texto">Aqui vai aparecer o resultado...</p>
+
+    <script>
+        var nome = document.getElementById('botao')
+        nome.addEventListener('click', clicar)
+        function clicar() {
+            var nomeDigitado = prompt('Qual é o seu nome?')
+            document.getElementById('texto').innerHTML = `Olá, <strong>${nomeDigitado}</strong>! É um prazer te conhecer!`
+        }
+    </script>
+</body>
+</html>

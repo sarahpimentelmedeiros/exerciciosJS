@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <style>
+        h1 {
+            font-family: cursive;        
+        }
+        .botao {
+            width: 100px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript externo</h1>
+    <button class="botao" id="b1"> Ação 1</button>
+    <button class="botao" id="b2"> Ação 2</button>
+    <button class="botao" id="b3"> Ação 3</button>
+    <button class="botao" id="b4"> Ação 4</button>
+    <p>Aqui vou registrar suas ações com os botões acima.</p>
+    
+
+    <script>
+        function pegarelemento(id){
+            getElementById(id);
+
+        }
+        var botoes = [pegarelemento(b1), pegarelemento(b2), pegarelemento(b3), pegarelemento(b4)];
+        botoes.addEventListener('click', acoes)
+        function acoes() {
+            
+        }
+    </script>
+</body>
+</html>
